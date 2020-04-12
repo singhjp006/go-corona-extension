@@ -1,17 +1,28 @@
 {
-"manifest_version": 2,
+    "manifest_version": 2,
     "name": "Go Corona",
     "description": "Go Corona",
     "version": "1.0",
+    "permissions": ["declarativeContent" ,"storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
     "content_scripts": [
         {
             "matches": [
-                "*://*/*"
-            ],
+            "*://*/*"
+        ],
             "js": [
-                "content.js"
-            ],
+            "content.js"
+        ],
             "run_at": "document_end"
         }
-    ]
+    ],
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/32x32.png"
+        }
+    }
 }
