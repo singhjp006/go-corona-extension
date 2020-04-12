@@ -11,7 +11,7 @@ function findAndReplace(){
   });
 }
 
-var words = ['zoombie', 'alien', 'baby cow', 'haha', 'cool', 'princess', 'go corona'];
+var words = ['zoombie', 'alien', 'baby cow', 'haha', 'cool', 'princess'];
 
 
 function replaceText (node) {
@@ -20,9 +20,9 @@ function replaceText (node) {
     value = value.replace(/coronavirus/gi, words[Math.floor(Math.random() * words.length)]);
     value = value.replace(/Coronavirus/gi, words[Math.floor(Math.random() * words.length)]);
     value = value.replace(/corona/gi, words[Math.floor(Math.random() * words.length)]);
-    value = value.replace(/Corona/gi, 'haha');
-    value = value.replace(/covid/gi, 'trump');
-    value = value.replace(/Covid/gi, 'yo');
+    value = value.replace(/Corona/gi, words[Math.floor(Math.random() * words.length)]);
+    value = value.replace(/covid/gi, words[Math.floor(Math.random() * words.length)]);
+    value = value.replace(/Covid/gi, words[Math.floor(Math.random() * words.length)]);
     value = value.replace(/covid19/gi, words[Math.floor(Math.random() * words.length)]);
     value = value.replace(/Covid19/gi, words[Math.floor(Math.random() * words.length)]);
     node.nodeValue = value;
